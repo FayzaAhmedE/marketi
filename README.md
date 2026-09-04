@@ -7,8 +7,7 @@
 ## Features
 
 - **Authentication System:** Secure Sign In, Sign Up, and Forgot Password flows using JWT Tokens.
-- **Home Screen:** Dynamic display of categories, popular products, special deal banners, and search functionality.
-- **Secure Token Storage:** Automatic request authorization management with `FlutterSecureStorage` and `Dio Interceptors`.
+- **Home Screen:** Dynamic display of categories, all products and search functionality.
 - **State Management:** Clean state handling and UI updates using `Flutter BLoC` / `Cubit`.
 - **API Integration:** Asynchronous REST API consumption for dynamic product and category fetching.
 
