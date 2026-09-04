@@ -149,7 +149,7 @@ class _VerifyCodeViewState extends State<VerifyCodeView> {
                         ? Text('00:${_secondsLeft.toString().padLeft(2, '0')}')
                         : TextButton(
                             onPressed: () {
-                              widget.cubit.sendCode(widget.contact);
+                              widget.cubit.sendCode(widget.contact, 'forgot_password');
                               _startTimer();
                             },
                             child: const Text('Resend Code'),

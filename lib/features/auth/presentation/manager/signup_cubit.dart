@@ -9,19 +9,19 @@ class SignupCubit extends Cubit<SignupState> {
 
   Future<void> signup({
     required String name,
-    required String username,
     required String phone,
     required String email,
     required String password,
+    required String confirmPassword,
   }) async {
     emit(SignupLoading());
     try {
       await _authRepo.register(
         name: name,
-        username: username,
         phone: phone,
         email: email,
         password: password,
+        confirmPassword: confirmPassword,
       );
       emit(SignupSuccess());
     } catch (e) {

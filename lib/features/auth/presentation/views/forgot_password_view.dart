@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/constants/app_colors.dart';
 import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_text_field.dart';
@@ -33,7 +34,8 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: BlocConsumer<ForgotPasswordCubit, ForgotPasswordState>(
             bloc: cubit,
@@ -78,11 +80,12 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                       controller: _contactController,
                       label: _isPhone ? 'Phone Number' : 'Email',
                       hintText: _isPhone ? 'Phone Number' : 'You@gmail.com',
-                      keyboardType:
-                          _isPhone ? TextInputType.phone : TextInputType.emailAddress,
+                      keyboardType: _isPhone
+                          ? TextInputType.phone
+                          : TextInputType.emailAddress,
                       validator: (value) {
                         if (value == null || value.trim().isEmpty) {
-                          return 'الحقل ده مطلوب';
+                          return ' Required field! ';
                         }
                         return null;
                       },
@@ -93,7 +96,10 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
                       isLoading: state is ForgotPasswordLoading,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          cubit.sendCode(_contactController.text.trim());
+                          cubit.sendCode(
+                            _contactController.text.trim(),
+                            _isPhone,
+                          );
                         }
                       },
                     ),

@@ -109,7 +109,10 @@ class _CreateNewPasswordViewState extends State<CreateNewPasswordView> {
                       isLoading: state is ForgotPasswordLoading,
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          widget.cubit.resetPassword(_passwordController.text);
+                          widget.cubit.resetPassword(
+                            _passwordController.text,
+                            _confirmController.text,
+                          );
                         }
                       },
                     ),

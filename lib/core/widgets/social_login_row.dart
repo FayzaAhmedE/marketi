@@ -7,7 +7,6 @@ class SocialLoginRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Text('Or Continue With'),
         const SizedBox(height: 12),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
