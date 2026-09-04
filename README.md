@@ -1,17 +1,42 @@
-# marketi
+# Marketi - E-Commerce Mobile Application 🛒📱
 
-A new Flutter project.
+**Marketi** is a modern e-commerce mobile application built using **Flutter** and **Clean Architecture** principles. The app provides a smooth shopping experience for users to browse products, explore categories, view special offers, and manage their profile.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Authentication System:** Secure Sign In, Sign Up, and Forgot Password flows using JWT Tokens.
+- **Home Screen:** Dynamic display of categories, popular products, special deal banners, and search functionality.
+- **Secure Token Storage:** Automatic request authorization management with `FlutterSecureStorage` and `Dio Interceptors`.
+- **State Management:** Clean state handling and UI updates using `Flutter BLoC` / `Cubit`.
+- **API Integration:** Asynchronous REST API consumption for dynamic product and category fetching.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack & Architecture
+
+- **Framework:** Flutter
+- **Language:** Dart
+- **Architecture:** Clean Architecture (Feature-first structure)
+- **State Management:** `flutter_bloc` / `Cubit`
+- **Network & API:** `dio`
+- **Secure Storage:** `flutter_secure_storage`
+- **Navigation & Routing:** On-Generate Dynamic Routing
+
+---
+
+## Project Structure
+
+```text
+lib/
+ ├── core/
+ │    ├── constants/       # App colors, themes, and asset paths
+ │    ├── helpers/         # Secure storage & helper utilities
+ │    ├── networking/      # Dio client & API interceptors
+ │    └── routing/         # App routes & navigation setup
+ └── features/
+      ├── auth/            # Login, Signup, Forgot Password
+      ├── home/            # Home screen, Categories, Products
+      ├── profile/         # User profile management
+      └── splash/          # Splash & Onboarding screens
