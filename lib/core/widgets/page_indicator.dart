@@ -3,7 +3,7 @@ import 'package:marketi/core/constants/app_colors.dart';
 import 'package:marketi/features/onboarding/data/models/onboarding_model.dart';
 
 class PageIndicator extends StatelessWidget {
-  const new({super.key, required this._pages, required this.currentIndex});
+  const PageIndicator({super.key, required this._pages, required this.currentIndex});
 
   final List<OnboardingModel> _pages;
   final int currentIndex;

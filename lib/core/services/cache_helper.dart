@@ -14,4 +14,16 @@ class CacheHelper {
   static bool getBool({required String key}) {
     return _prefs?.getBool(key) ?? false;
   }
+  
+  static Future<bool> saveString({required String key, required String value}) {
+    return _prefs!.setString(key, value);
+  }
+
+  static String getString({required String key}) {
+    return _prefs?.getString(key) ?? '';
+  }
+
+  static Future<bool> removeData({required String key}) {
+    return _prefs!.remove(key);
+  }
 }

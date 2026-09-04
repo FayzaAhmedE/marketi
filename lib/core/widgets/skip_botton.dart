@@ -3,7 +3,7 @@ import 'package:marketi/core/constants/app_colors.dart';
 import 'package:marketi/features/onboarding/presentation/manager/onboarding_cubit.dart';
 
 class SkipBotton extends StatelessWidget {
-  const new({super.key, required this.cubit});
+  const SkipBotton({super.key, required this.cubit});
 
   final OnboardingCubit cubit;
 

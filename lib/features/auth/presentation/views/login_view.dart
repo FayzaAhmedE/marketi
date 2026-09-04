@@ -56,7 +56,7 @@ class _LoginBodyState extends State<_LoginBody> {
                   .showSnackBar(SnackBar(content: Text(state.message)));
             }
             if (state is LoginSuccess) {
-              Navigator.pushReplacementNamed(context, AppRoutes.profile);
+              Navigator.pushReplacementNamed(context, AppRoutes.home);
             }
           },
           builder: (context, state) {

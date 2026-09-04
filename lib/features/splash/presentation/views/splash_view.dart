@@ -23,7 +23,7 @@ class _SplashViewState extends State<SplashView> {
   }
 
   void _navigateNext() {
-    Timer(const Duration(seconds: 15), () {
+    Timer(const Duration(seconds: 3), () {
       if (!mounted) return;
 
       final bool onboardingDone = CacheHelper.getBool(
